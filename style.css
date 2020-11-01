@@ -1,0 +1,402 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background: rgb(23, 25, 35);
+    --foreground: rgb(38, 41, 58);
+
+    --high-contrast: rgba(255, 255, 255, 0.92);
+    --medium-contrast: rgb(160, 174, 192);
+
+    --accent: seagreen;
+    --highlight: lightseagreen;
+
+    --gradient: linear-gradient(var(--background), rgb(47, 50, 61));
+    /* --gradient: linear-gradient(var(--background), var(--foreground)); */
+    --shadow: 0 0 10px rgba(0, 0, 0, 0.438);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+    line-height: 1.5;
+    background-color: var(--background);
+    background-image: var(--gradient);
+    background-attachment: fixed;
+    color: var(--medium-contrast);
+}
+
+::selection {
+    background-color: var(--highlight);
+    color: white;
+}
+
+.container {
+    max-width: 70em;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+ul {
+    list-style-type: none;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 500;
+}
+
+.welcome-header {
+    font-size: 1.5em;
+}
+
+.welcome-paragraph {
+    font-size: 1.3em;
+    margin-top: 1em;
+}
+
+h1 {
+    margin-top: 1em;
+}
+
+h2 {
+    margin-top: 4em;
+}
+
+h1, h2, h3 {
+    color: var(--high-contrast);
+}
+
+a {
+    color: var(--high-contrast);
+    text-decoration-color: transparent;
+}
+
+a:hover {
+    color: var(--highlight);
+    transition: color 150ms;
+}
+
+.img-wrapper {
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    background-color:var(--foreground);
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.project {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    align-items: center;
+}
+
+.project-info {
+    grid-column: 6/11;
+    grid-row: 1/2;
+    z-index: 2;
+    margin-top: 2em;
+}
+
+.project-reverse .project-info {
+    grid-column: 1/6;
+    grid-row: 1/2;
+}
+
+.project-info p {
+    padding: 1.7em;
+    padding-left: 3em;
+    background-color: var(--foreground);
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+}
+
+.project-reverse p {
+    padding-left: 1.7em;
+    padding-right: 3em;
+}
+
+.project-image {
+    grid-column: 1/7;
+    grid-row: 1/2;
+}
+
+.project-reverse .project-image {
+    grid-column: 5/11;
+    grid-row: 1/2;
+}
+
+.tech ul {
+    font-family: monospace;
+    display: flex;
+    margin: 2em 0;
+    width: fit-content;
+    margin-left: auto;
+}
+
+.project-reverse .tech ul {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.tech li:not(:last-child) {
+    margin-right: 1.5em;
+}
+
+.tech li:not(:first-child) {
+    margin-left: 1.5em;
+}
+
+.project a, .articles a {
+    background-color:var(--foreground);
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+}
+
+.project a:first-of-type {
+    margin-right: 0.7em;
+}
+
+.project {
+    text-align: right;
+}
+
+.project-reverse {
+    text-align: left;
+}
+
+section {
+    margin-bottom: 4em;
+}
+
+.article-header {
+    margin: 2em 0;
+}
+
+.monospace {
+    font-family: monospace;
+    color: var(--accent);
+}
+
+.article-header h2:after {
+    display: inline-block;
+    content: "";
+    margin-left: 0.5em;
+    margin-bottom: 0.2em;
+    width: 7em;
+    height: 1px;
+    background-color: var(--medium-contrast);
+}
+
+.section-header {
+    margin: 1em 0;
+}
+
+.navbar {
+    width: 100%;
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.438);
+    position: sticky;
+    top: 0;
+    background-color: inherit;
+    z-index: 3;
+}
+
+nav {
+    padding: 1.5em 1em;
+    max-width: 70em;
+    margin: auto;
+}
+
+nav ul {
+    display: flex;
+    width: fit-content;
+    margin-left: auto;
+}
+
+nav li:not(:first-child) {
+    margin-left: 2em;
+}
+
+h4 {
+    font-family: monospace;
+    color: var(--accent);
+}
+
+.articles {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.articles section {
+    width: 30%;
+}
+
+.articles p {
+    background-color:var(--foreground);
+    padding: 1.5em;
+    padding-bottom: 4em;
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+    margin: 2em 0;
+}
+
+#about {
+    margin: auto;
+    width: fit-content;
+}
+
+#about .article-header {
+    width: fit-content;
+}
+
+.about {
+    display: flex;
+    width: calc(fit-content + 5em);
+    /* flex-wrap: wrap; */
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about .img-wrapper-me {
+    max-width: 20em;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    flex-shrink: 1;
+    margin: auto;
+}
+
+.about p {
+    max-width: 20em;
+    flex-grow: 1;
+    margin: auto;
+    margin-right: 5em;
+    margin-bottom: 1.5em;
+}
+
+.about a {
+    color: var(--highlight);
+}
+
+.about a:hover {
+    text-decoration-color: var(--highlight);
+    transition: 150ms;
+}
+
+#contact {
+    max-width: 25em;
+    margin: auto;
+}
+
+#contact h3 {
+    margin: 1em 0;
+    font-size: 2em;
+}
+
+#contact a {
+    display: block;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.438);
+    background-color:var(--foreground);
+    width: fit-content;
+    margin: 2em 0;
+    font-weight: 500;
+    /* border: 1px solid cyan;
+    color: cyan; */
+}
+
+.contact-links {
+    max-width: 25em;
+    margin: 3em auto;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--medium-contrast);
+    padding-top: 1.5em;
+}
+
+/* .contact-links a:hover {
+    text-decoration-color: var(--highlight);
+    transition: 150ms;
+} */
+
+article:target {
+    padding-top: 1em;
+}
+
+@media(max-width: 600px) {
+    nav ul {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    nav .monospace {
+        display: none;
+    }
+
+    .project {
+        grid-template-columns: 100%;
+        grid-template-rows: fit-content;
+        align-items: unset;
+        position: relative;
+    }
+
+    .project-info p {
+        box-shadow: none;
+        background-color: transparent;
+        padding: 0;
+    }
+
+    .project .project-image {
+        height: fit-content;
+        grid-row: 1/2;
+        grid-column: 1/2;
+        position: relative;
+    }
+
+    .project-image::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        display: block;
+        height: 100%;
+        width: 100%;
+        background-color: var(--foreground);
+        opacity: 0.952;
+    }
+
+    .project-info {
+        padding: 1.5em;
+        /* height: 100%; */
+        margin-top: 0;
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+
+    .articles section {
+        width: 100%;
+    }
+
+    .articles {
+        display: block;
+    }
+
+    .about p {
+        margin-right: 0;
+    }
+
+    .about {
+        display: block;
+    }
+}
