@@ -9,27 +9,27 @@
 </head>
 
 <body>
-    <header class="navbar">
-        <nav>
-            <ul>
+    <header class="top-header">
+        <nav class="navbar">
+            <ul class="nav-links">
                 <li>
-                    <a href="#projects"><span class="monospace">01. </span>Projects</a>
+                    <a class="link" href="#projects"><span class="monospace">01. </span>Projects</a>
                 </li>
                 <li>
-                    <a href="#articles"><span class="monospace">02. </span>Articles</a>
+                    <a class="link" href="#articles"><span class="monospace">02. </span>Articles</a>
                 </li>
                 <li>
-                    <a href="#about"><span class="monospace">03. </span>About</a>
+                    <a class="link" href="#about"><span class="monospace">03. </span>About</a>
                 </li>
                 <li>
-                    <a href="#contact"><span class="monospace">04. </span>Contact</a>
+                    <a class="link" href="#contact"><span class="monospace">04. </span>Contact</a>
                 </li>
             </ul>
         </nav>
     </header>
     <section class="container welcome-section">
         <header class="welcome-header">
-            <h1>
+            <h1 class="welcome-heading">
                 Hi, I'm Tomasz Chmielnicki.
                 <br>
                 I'm a  front-end web developer.
@@ -41,9 +41,9 @@
         </p>
     </section>
     <main class="container">
-        <article id="projects">
+        <article id="projects" class="page-section">
             <header class="article-header">
-                <h2><span class="monospace">01. </span>Projects</h2>
+                <h2 class="article-heading"><span class="monospace">01. </span>Projects</h2>
             </header>
             <section class="project">
                 <div class="project-info">
@@ -51,39 +51,35 @@
                         <h4>Project 01</h4>
                         <h3>Social network</h3>
                     </header>
-                    <p>Sign up with email and password, edit your profile, post images, follow other users, like, comment, receive notifications.</p>
-                    <div class="tech">
-                        <ul>
-                            <li>React</li>
-                            <li>React Router</li>
-                            <li>Firebase</li>
-                        </ul>
-                    </div>
-                    <a href="https://github.com/tomek-ch/very-cool-pics">See more</a>
-                    <a href="https://very-cool-pics.web.app">Play around</a>
+                    <p class="project-description">Sign up with email and password, edit your profile, post images, follow other users, like, comment, receive notifications.</p>
+                    <ul class="tech">
+                        <li class="tech-item">React</li>
+                        <li class="tech-item">React Router</li>
+                        <li class="tech-item">Firebase</li>
+                    </ul>
+                    <a class="link btn" href="https://github.com/tomek-ch/very-cool-pics">See more</a>
+                    <a class="link btn" href="https://very-cool-pics.web.app">Play around</a>
                 </div>
                 <div class="img-wrapper project-image">
                     <img src="images/social.png"Screenshot from a social network app">
                 </div>
             </section>
             <section class="project project-reverse">
-                <div class="project-info">
+                <div class="project-info project-info-reverse">
                     <header class="section-header">
                         <h4>Project 02</h4>
                         <h3>Chat</h3>
                     </header>
-                    <p>Sign up with a Google account, search for other users, send text messages and images.</p>
-                    <div class="tech">
-                        <ul>
-                            <li>HTML</li>
-                            <li>JavaScript</li>
-                            <li>Firebase</li>
-                        </ul>
-                    </div>
-                    <a href="https://github.com/tomek-ch/chat">See more</a>
-                    <a href="https://always-in-touch.web.app">Play around</a>
+                    <p class="project-description project-description-reverse">Sign up with a Google account, search for other users, send text messages and images.</p>
+                    <ul class="tech tech-reverse">
+                        <li class="tech-item">HTML</li>
+                        <li class="tech-item">JavaScript</li>
+                        <li class="tech-item">Firebase</li>
+                    </ul>
+                    <a class="link btn" href="https://github.com/tomek-ch/chat">See more</a>
+                    <a class="link btn" href="https://always-in-touch.web.app">Play around</a>
                 </div>
-                <div class="img-wrapper project-image">
+                <div class="img-wrapper project-image project-image-reverse">
                     <img src="images/chat.png" alt="Screenshot from a chat app">
                 </div>
             </section>
@@ -93,27 +89,25 @@
                         <h4>Project 03</h4>
                         <h3>Notekeeper</h3>
                     </header>
-                    <p>Add, edit, delete and search for notes and things to do. Mark items as done and they will be put to the bottom.</p>
-                    <div class="tech">
-                        <ul>
-                            <li>React</li>
-                            <li>React Router</li>
-                        </ul>
-                    </div>
-                    <a href="https://github.com/tomek-ch/notekeeper">See more</a>
-                    <a href="https://take-a-note-or-two.web.app">Play around</a>
+                    <p class="project-description">Add, edit, delete and search for notes and things to do. Mark items as done and they will be put to the bottom.</p>
+                    <ul class="tech">
+                        <li class="tech-item">React</li>
+                        <li class="tech-item">React Router</li>
+                    </ul>
+                    <a class="link btn" href="https://github.com/tomek-ch/notekeeper">See more</a>
+                    <a class="link btn" href="https://take-a-note-or-two.web.app">Play around</a>
                 </div>
                 <div class="img-wrapper project-image">
                     <img src="images/notes.png" alt="Screenshot from a notekeeper app">
                 </div>
             </section>
         </article>
-        <article id="articles">
+        <article id="articles" class="page-section">
             <header class="article-header">
-                <h2><span class="monospace">02. </span>Articles</h2>
+                <h2 class="article-heading"><span class="monospace">02. </span>Articles</h2>
             </header>
             <div class="articles">
-                <section>
+                <section class="article-thumbnail">
                     <header>
                         <h4>Article 01</h4>
                         <h3>Intro to async JavaScript</h3>
@@ -121,9 +115,9 @@
                     <p>
                         Normally, our JavaScript code is executed line by line, top to bottom. An instruction can only run once...
                     </p>
-                    <a href="https://medium.com/swlh/intro-to-asynchronous-javascript-e1839e421ae6">Read more</a>
+                    <a class="link btn" href="https://medium.com/swlh/intro-to-asynchronous-javascript-e1839e421ae6">Read more</a>
                 </section>
-                <section>
+                <section class="article-thumbnail">
                     <header>
                         <h4>Article 02</h4>
                         <h3>Intro to AJAX and XHR</h3>
@@ -131,9 +125,9 @@
                         <p>
                             Whenever you submit a url from your web browser's address bar, you make an HTTP request to a server...
                         </p>
-                        <a href="https://medium.com/swlh/intro-to-ajax-and-xhr-network-requests-in-javascript-41738093fe00">Read more</a>
+                        <a class="link btn" href="https://medium.com/swlh/intro-to-ajax-and-xhr-network-requests-in-javascript-41738093fe00">Read more</a>
                 </section>
-                <section>
+                <section class="article-thumbnail">
                     <header>
                         <h4>Article 03</h4>
                         <h3>Promises and fetch</h3>
@@ -141,19 +135,19 @@
                     <p>
                         ES6 introduced a brand new way of handling asynchronous actions and making network requests...
                     </p>
-                    <a href="https://medium.com/swlh/promises-async-await-and-fetch-network-requests-in-modern-javascript-fd0b2b384f3e">Read more</a>
+                    <a class="link btn" href="https://medium.com/swlh/promises-async-await-and-fetch-network-requests-in-modern-javascript-fd0b2b384f3e">Read more</a>
                 </section>
             </div>
         </article>
-        <article id="about">
+        <article id="about" class="page-section">
             <header class="article-header">
-                <h2><span class="monospace">03. </span>About me</h2>
+                <h2 class="article-heading"><span class="monospace">03. </span>About me</h2>
             </header>
             <section class="about">
                 <div>
-                    <p>Hello! My name is Tomasz Chmielnicki. I'm an aspiring front-end web developer.</p>
-                    <p>
-                        I'm curious and I've always been passionate about creating. For the past year my life has been all about growth and I'm not thinking about stopping anytime soon. Recently I've been working with React. Apart from coding I've also been <a href="https://tomek-ch.medium.com/">writing about coding</a>.
+                    <p class="about-paragraph">Hello! My name is Tomasz Chmielnicki. I'm an aspiring front-end web developer.</p>
+                    <p class="about-paragraph">
+                        I'm curious and I've always been passionate about creating. For the past year my life has been all about growth and I'm not thinking about stopping anytime soon. Recently I've been working with React. Apart from coding I've also been <a class="link inline-link" href="https://tomek-ch.medium.com/">writing about coding</a>.
                     </p>
                 </div>
                 <div class="img-wrapper-me">
@@ -161,18 +155,18 @@
                 </div>
             </section>
         </article>
-        <article id="contact">
+        <article id="contact" class="page-section contact-section">
             <header class="article-header">
-                <h2><span class="monospace">04. </span>Contact</h2>
-                <h3>Let's get in touch</h3>
+                <h2 class="article-heading"><span class="monospace">04. </span>Contact</h2>
+                <h3 class="cta-heading">Let's get in touch</h3>
             </header>
             <p>I am currently looking for new opportunities. You can contact me under the following email address: tchmielnicki18@gmail.com. Let's work together!</p>
-            <a href="mailto:tchmielnicki18@gmail.com">Say hello</a>
+            <a class="link btn cta-btn" href="mailto:tchmielnicki18@gmail.com">Say hello</a>
         </article>
         <div class="contact-links">
-            <a href="mailto:tchmielnicki18@gmail.com">Email</a>
-            <a href="https://tomek-ch.medium.com/">Medium</a>
-            <a href="https://github.com/tomek-ch">GitHub</a>
+            <a class="link" href="mailto:tchmielnicki18@gmail.com">Email</a>
+            <a class="link" href="https://tomek-ch.medium.com/">Medium</a>
+            <a class="link" href="https://github.com/tomek-ch">GitHub</a>
         </div>
     </main>
 </body>

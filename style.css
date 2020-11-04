@@ -27,7 +27,7 @@ body {
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
     line-height: 1.5;
     background-color: var(--background);
-    background-image: var(--gradient);
+    /* background-image: var(--gradient); */
     background-attachment: fixed;
     color: var(--medium-contrast);
 }
@@ -60,11 +60,11 @@ h1, h2, h3, h4 {
     margin-top: 1em;
 }
 
-h1 {
+.welcome-heading {
     margin-top: 1em;
 }
 
-h2 {
+.article-heading {
     margin-top: 4em;
 }
 
@@ -72,12 +72,12 @@ h1, h2, h3 {
     color: var(--high-contrast);
 }
 
-a {
+.link {
     color: var(--high-contrast);
     text-decoration-color: transparent;
 }
 
-a:hover {
+.link:hover {
     color: var(--highlight);
     transition: color 150ms;
 }
@@ -86,7 +86,6 @@ a:hover {
     border-radius: 5px;
     overflow: hidden;
     box-shadow: var(--shadow);
-    background-color:var(--foreground);
 }
 
 img {
@@ -107,12 +106,12 @@ img {
     margin-top: 2em;
 }
 
-.project-reverse .project-info {
+.project-info-reverse {
     grid-column: 1/6;
     grid-row: 1/2;
 }
 
-.project-info p {
+.project-description {
     padding: 1.7em;
     padding-left: 3em;
     background-color: var(--foreground);
@@ -120,7 +119,7 @@ img {
     box-shadow: var(--shadow);
 }
 
-.project-reverse p {
+.project-description-reverse {
     padding-left: 1.7em;
     padding-right: 3em;
 }
@@ -130,12 +129,12 @@ img {
     grid-row: 1/2;
 }
 
-.project-reverse .project-image {
+.project-image-reverse {
     grid-column: 5/11;
     grid-row: 1/2;
 }
 
-.tech ul {
+.tech {
     font-family: monospace;
     display: flex;
     margin: 2em 0;
@@ -143,22 +142,22 @@ img {
     margin-left: auto;
 }
 
-.project-reverse .tech ul {
+.tech-reverse {
     margin-left: 0;
     margin-right: auto;
 }
 
-.tech li:not(:last-child) {
+.tech-item:not(:last-child) {
     margin-right: 1.5em;
 }
 
-.tech li:not(:first-child) {
+.tech-item:not(:first-child) {
     margin-left: 1.5em;
 }
 
-.project a, .articles a {
+.btn {
     background-color:var(--foreground);
-    padding: 1em;
+    padding: 1em 1.5em;
     border-radius: 5px;
     box-shadow: var(--shadow);
 }
@@ -202,7 +201,7 @@ section {
     margin: 1em 0;
 }
 
-.navbar {
+.top-header {
     width: 100%;
     box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.438);
     position: sticky;
@@ -211,19 +210,19 @@ section {
     z-index: 3;
 }
 
-nav {
+.navbar {
     padding: 1.5em 1em;
     max-width: 70em;
     margin: auto;
 }
 
-nav ul {
+.nav-links {
     display: flex;
     width: fit-content;
     margin-left: auto;
 }
 
-nav li:not(:first-child) {
+.navbar li:not(:first-child) {
     margin-left: 2em;
 }
 
@@ -238,7 +237,7 @@ h4 {
     flex-wrap: wrap;
 }
 
-.articles section {
+.article-thumbnail {
     width: 30%;
 }
 
@@ -269,7 +268,7 @@ h4 {
 }
 
 .about .img-wrapper-me {
-    max-width: 20em;
+    max-width: 22em;
     border-radius: 5px;
     overflow: hidden;
     box-shadow: var(--shadow);
@@ -277,44 +276,38 @@ h4 {
     margin: auto;
 }
 
-.about p {
-    max-width: 20em;
+.about-paragraph {
+    max-width: 22em;
     flex-grow: 1;
     margin: auto;
     margin-right: 5em;
     margin-bottom: 1.5em;
 }
 
-.about a {
+.inline-link {
     color: var(--highlight);
 }
 
-.about a:hover {
+.inline-link:hover {
     text-decoration-color: var(--highlight);
     transition: 150ms;
 }
 
-#contact {
+.contact-section {
     max-width: 25em;
     margin: auto;
 }
 
-#contact h3 {
+.cta-heading {
     margin: 1em 0;
     font-size: 2em;
 }
 
-#contact a {
+.cta-btn {
     display: block;
-    padding: 1em;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.438);
-    background-color:var(--foreground);
     width: fit-content;
     margin: 2em 0;
     font-weight: 500;
-    /* border: 1px solid cyan;
-    color: cyan; */
 }
 
 .contact-links {
@@ -331,28 +324,28 @@ h4 {
     transition: 150ms;
 } */
 
-article:target {
+.page-section:target {
     padding-top: 1em;
 }
 
 @media(max-width: 600px) {
-    nav ul {
+    .nav-links {
         width: 100%;
         justify-content: space-between;
     }
 
-    nav .monospace {
+    .navbar .monospace {
         display: none;
     }
 
     .project {
         grid-template-columns: 100%;
-        grid-template-rows: fit-content;
+        /* grid-template-rows: fit-content; */
         align-items: unset;
         position: relative;
     }
 
-    .project-info p {
+    .project-description {
         box-shadow: none;
         background-color: transparent;
         padding: 0;
@@ -372,13 +365,12 @@ article:target {
         display: block;
         height: 100%;
         width: 100%;
-        background-color: var(--foreground);
+        background-color: var(--background);
         opacity: 0.952;
     }
 
     .project-info {
         padding: 1.5em;
-        /* height: 100%; */
         margin-top: 0;
         grid-row: 1/2;
         grid-column: 1/2;
@@ -392,13 +384,9 @@ article:target {
         display: block;
     }
 
-    .about p {
+    .about-paragraph {
         margin-right: 0;
     }
-
-    /* #about {
-        width: 100%;
-    } */
 
     .about {
         display: block;
