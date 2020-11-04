@@ -14,9 +14,11 @@
     --accent: seagreen;
     --highlight: lightseagreen;
 
-    --gradient: linear-gradient(var(--background), rgb(47, 50, 61));
+    /* --gradient: linear-gradient(var(--background), rgb(47, 50, 61)); */
     /* --gradient: linear-gradient(var(--background), var(--foreground)); */
     --shadow: 0 0 10px rgba(0, 0, 0, 0.438);
+
+    --monospace: Consolas, Courier, 'Courier New', monospace;
 }
 
 html {
@@ -135,7 +137,7 @@ img {
 }
 
 .tech {
-    font-family: monospace;
+    font-family: var(--monospace);
     display: flex;
     margin: 2em 0;
     width: fit-content;
@@ -183,7 +185,7 @@ section {
 }
 
 .monospace {
-    font-family: monospace;
+    font-family: var(--monospace);
     color: var(--accent);
 }
 
@@ -227,7 +229,7 @@ section {
 }
 
 h4 {
-    font-family: monospace;
+    font-family: var(--monospace);
     color: var(--accent);
 }
 
