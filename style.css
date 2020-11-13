@@ -11,8 +11,8 @@
     --high-contrast: rgba(255, 255, 255, 0.92);
     --medium-contrast: rgb(160, 174, 192);
 
-    --accent: seagreen;
-    --highlight: lightseagreen;
+    --accent:  rgb(48, 223, 156);
+    --highlight: rgb(48, 223, 156);
 
     /* --gradient: linear-gradient(var(--background), rgb(47, 50, 61)); */
     /* --gradient: linear-gradient(var(--background), var(--foreground)); */
@@ -150,11 +150,11 @@ img {
 }
 
 .tech-item:not(:last-child) {
-    margin-right: 1.5em;
+    margin-right: 1em;
 }
 
 .tech-item:not(:first-child) {
-    margin-left: 1.5em;
+    margin-left: 1em;
 }
 
 .btn {
@@ -339,6 +339,15 @@ h4 {
     .navbar .monospace {
         display: none;
     }
+
+    /* .welcome-header {
+        font-size: 1em;
+    }
+
+    .welcome-paragraph {
+        font-size: 1.1em;
+        margin-bottom: -3em;
+    } */
 
     .project {
         grid-template-columns: 100%;
