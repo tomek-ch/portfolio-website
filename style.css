@@ -140,6 +140,7 @@ img {
     font-family: var(--monospace);
     display: flex;
     margin: 2em 0;
+    width: -moz-fit-content;
     width: fit-content;
     margin-left: auto;
 }
@@ -220,6 +221,7 @@ section {
 
 .nav-links {
     display: flex;
+    width: -moz-fit-content;
     width: fit-content;
     margin-left: auto;
 }
@@ -254,10 +256,12 @@ h4 {
 
 #about {
     margin: auto;
+    width: -moz-fit-content;
     width: fit-content;
 }
 
 #about .article-header {
+    width: -moz-fit-content;
     width: fit-content;
 }
 
@@ -307,6 +311,7 @@ h4 {
 
 .cta-btn {
     display: block;
+    width: -moz-fit-content;
     width: fit-content;
     margin: 2em 0;
     font-weight: 500;
@@ -371,6 +376,7 @@ h4 {
     }
 
     .project .project-image {
+        width: -moz-fit-content;
         height: fit-content;
         grid-row: 1/2;
         grid-column: 1/2;
