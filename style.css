@@ -382,7 +382,6 @@ h4 {
     }
 
     .project .project-image {
-        width: -moz-fit-content;
         height: fit-content;
         grid-row: 1/2;
         grid-column: 1/2;
