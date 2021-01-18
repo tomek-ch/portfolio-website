@@ -325,11 +325,13 @@ h4 {
 
 .contact-links {
     max-width: 25em;
-    margin: 3em auto;
+    margin: 1.5em auto;
     display: flex;
     justify-content: space-between;
-    border-top: 1px solid var(--medium-contrast);
+    /* border-top: 1px solid var(--medium-contrast); */
+    border-bottom: 1px solid var(--medium-contrast);
     padding-top: 1.5em;
+    padding-bottom: 3em;
 }
 
 /* .contact-links a:hover {
@@ -343,6 +345,12 @@ h4 {
 
 .mobile-break {
     display: none;
+}
+
+.credit {
+    font-size: 0.8em;
+    text-align: center;
+    padding: 1em 0;
 }
 
 @media(max-width: 600px) {
